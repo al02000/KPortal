@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "166798193073",
+    "firebase_url": "https://kportal-cdb21.firebaseio.com",
+    "project_id": "kportal-cdb21",
+    "storage_bucket": "kportal-cdb21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166798193073:android:f846a9299da8577e",
+        "android_client_info": {
+          "package_name": "com.kportal.android.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166798193073-k39h2jiq32u89o0ju6nj94f4sqch8v2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADFHt6N_6zAVjy2ZHnNUNdPFchkKaC5wM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
