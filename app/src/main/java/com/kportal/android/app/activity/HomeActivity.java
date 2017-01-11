@@ -347,13 +347,6 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
-//        if (mWebView.getUrl().contains("#")) {
-//            for (int i = 0; i < 2; i++) {
-//                mWebView.goBack();
-//            }
-//            return;
-//        }
-
         if (mWebView.getUrl().equals(Cvalue.MainDomain) || mWebView.getUrl().equals(Cvalue.MainDomain+"#")) {
             if (System.currentTimeMillis() > backPressedTime + 2000) {
                 backPressedTime = System.currentTimeMillis();
