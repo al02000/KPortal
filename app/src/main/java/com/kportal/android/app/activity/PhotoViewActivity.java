@@ -31,7 +31,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -107,7 +106,7 @@ public class PhotoViewActivity extends AppCompatActivity
         implements View.OnClickListener, OnColorChangedListener, WidthChangeListener, LineTypeChangeListener, FigureChangeListener, TextChangedListener,
         DlgClickListener, OnMapReadyCallback, LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, SensorEventListener{
 
-    private final String TAG = "PhotoViewActivity";
+//    private final String TAG = "PhotoViewActivity";
     private final int CAMERA = 1001, GALLERY = 1002, EXIT = 1003, SHARE = 1004, GALLERY_SHARE = 1005, REMOVE_EDIT=1006;
 
     private ImageView mIvBack, mIvChoice, mIvSave, mIvShare, mIvEdit, mIvCamera, mIvGallery, mIvSelectImg, mIvPen, mIvText, mIvFigure, mIvEraser, mIvEditText, mIvDelFigure;
@@ -211,7 +210,6 @@ public class PhotoViewActivity extends AppCompatActivity
     protected void onCreate(Bundle saved) {
         super.onCreate(saved);
         setContentView(R.layout.photoview_activity);
-        Log.e("TEST", "onCreate");
         mContext = getApplicationContext();
         act = this;
         setLayout();
@@ -621,13 +619,11 @@ public class PhotoViewActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e("TEST", "onStart");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Log.e("TEST", "onResume");
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED &&
                     ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
@@ -651,18 +647,15 @@ public class PhotoViewActivity extends AppCompatActivity
     public void onStop() {
         super.onStop();
 //        stopTracking();
-        Log.e("TEST", "onStop");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        Log.e("TEST", "onPause");
     }
 
     @Override
     protected void onDestroy() {
-        Log.e("TEST", "onDestroy");
         Cutil.recycleBitmap(mIvSelectImg);
         Cvalue.nTouch = 0;
         mContext = null;
@@ -1958,7 +1951,7 @@ public class PhotoViewActivity extends AppCompatActivity
         try {
             File cacheDir;
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                cacheDir = new File(Environment.getExternalStorageDirectory(), "BokBang");
+                cacheDir = new File(Environment.getExternalStorageDirectory(), "KPortal");
             }else {
                 cacheDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
             }

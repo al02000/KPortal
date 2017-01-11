@@ -22,7 +22,7 @@ public class ColorPickerDialog extends Dialog implements View.OnClickListener{
 
     public static OnColorChangedListener mListener;
     private int mInitialColor;
-    private final String TAG = "ColorPickerDialog";
+//    private final String TAG = "ColorPickerDialog";
     private ImageView mIvType1, mIvType2, mIvType3, mIvType4, mIvType5, mIvType6, mIvType7, mIvType8, mIvType9, mIvType10, mIvType11, mIvType12, mIvType13, mIvType14, mIvType15, mIvType16, mIvType17, mIvType18,
             mIvType19, mIvType20, mIvPreColor, mIvSelectColor;
     private TextView mTvOk, mTvCancel;

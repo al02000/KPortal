@@ -44,6 +44,6 @@ public class Cvalue {
     public static final String ANOTHER_SETTING = "ANOTHER_SETTING";
 
     public static final String BACKUP_USER_DATA = "BACKUP_USER_DATA.txt";
-    public static final String BASE_FOLDER_PATH = Environment.getExternalStorageDirectory().getAbsolutePath()+"/BokBang";
+    public static final String BASE_FOLDER_PATH = Environment.getExternalStorageDirectory().getAbsolutePath()+"/KPortal";
 
 }

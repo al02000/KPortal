@@ -49,7 +49,6 @@ public class HttpController {
             }
             conn.connect();
             int responseCode = conn.getResponseCode();
-            Log.i(TAG, "ResponseCode == "+responseCode);
             if(responseCode == HttpURLConnection.HTTP_OK) {
                 String line = "";
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(conn.getInputStream()));

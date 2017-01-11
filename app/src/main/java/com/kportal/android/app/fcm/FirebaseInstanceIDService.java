@@ -12,12 +12,12 @@ import com.kportal.android.app.dto.UserData;
 
 public class FirebaseInstanceIDService extends FirebaseInstanceIdService {
 
-    private final String TAG = "IDService";
+//    private final String TAG = "IDService";
 
     @Override
     public void onTokenRefresh() {
         String token = FirebaseInstanceId.getInstance().getToken();
-        Log.i(TAG, "Token > "+token);
+//        Log.i(TAG, "Token > "+token);
         UserData mUserData = new UserData(getApplicationContext());
         mUserData.setToken(token);
         mUserData.setIsFirst(false);

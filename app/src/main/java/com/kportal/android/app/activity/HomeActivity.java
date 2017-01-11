@@ -45,7 +45,6 @@ import com.kportal.android.app.common.Cutil;
 import com.kportal.android.app.common.Cvalue;
 import com.kportal.android.app.dto.UserData;
 import com.kportal.android.app.R;
-import com.kportal.android.app.service.OnClearFromRecentService;
 import com.kportal.android.app.util.MyProgress;
 
 
@@ -67,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
     private GPSListener mGpsListener;
     private double mGeoLat, mGeoLng;
     private boolean isGeoState = false, isSetupState = false, isFirst = true;
-    private final String TAG = "ActLoading";
+//    private final String TAG = "ActLoading";
     private MyProgress mProgress;
 
     // UserData 저장용 SharedPreference
@@ -84,7 +83,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(saved);
         setContentView(R.layout.activity_main);
         setLayout();
-        startService(new Intent(getBaseContext(), OnClearFromRecentService.class));
     }
 
     private void setLayout() {
@@ -349,14 +347,14 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
 
-        if (mWebView.getUrl().contains("#")) {
-            for (int i = 0; i < 2; i++) {
-                mWebView.goBack();
-            }
-            return;
-        }
+//        if (mWebView.getUrl().contains("#")) {
+//            for (int i = 0; i < 2; i++) {
+//                mWebView.goBack();
+//            }
+//            return;
+//        }
 
-        if (mWebView.getUrl().equals("http://dev-m.krauction.co.kr/")) {
+        if (mWebView.getUrl().equals(Cvalue.MainDomain) || mWebView.getUrl().equals(Cvalue.MainDomain+"#")) {
             if (System.currentTimeMillis() > backPressedTime + 2000) {
                 backPressedTime = System.currentTimeMillis();
                 toastShort("한번 더 누르시면 종료됩니다.");

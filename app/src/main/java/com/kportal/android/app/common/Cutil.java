@@ -42,7 +42,7 @@ import java.nio.channels.FileChannel;
 
 public class Cutil {
 
-    private static final String TAG = "CUtil";
+//    private static final String TAG = "CUtil";
 
 
     /**
@@ -169,7 +169,6 @@ public class Cutil {
     public static void recycleBitmap(ImageView view) {
         Drawable d = view.getDrawable();
         if(d instanceof BitmapDrawable) {
-            Log.e(TAG, "RECYCLE");
             Bitmap b = ((BitmapDrawable)d).getBitmap();
             b.recycle();
         }
@@ -221,7 +220,7 @@ public class Cutil {
         if(view != null) {
             canvas.drawBitmap(view, 0, 0, null);
         }
-        canvas.drawBitmap(waterMark, w-(margin*2), h-(margin*2), paint);
+        canvas.drawBitmap(waterMark, w-(margin*3), h-(margin*2), paint);
         return result;
     }
 

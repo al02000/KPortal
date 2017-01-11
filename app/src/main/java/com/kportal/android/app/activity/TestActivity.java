@@ -42,7 +42,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button defaultNoti, bigTextNoti, bigImageNoti;
     private ImageView ivImg;
-    private final String TAG = "TestActivity";
+//    private final String TAG = "TestActivity";
 
     @Override
     public void onCreate(Bundle saved) {
@@ -163,7 +163,6 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         Date date = new Date();
         String fileName = "nb_img_"+simpleDateFormat.format(date)+".jpg";
         fileName.replace(":", "_");
-        Log.e(TAG, "FileName ==> "+fileName);
         File destination = new File(Cvalue.BASE_FOLDER_PATH, fileName);
         FileOutputStream fo;
         try{
